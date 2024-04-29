@@ -27,6 +27,54 @@ const Homepage = () => {
         router.push(pathname + "/agir")
     }
 
+    const historia = () => {
+        router.push(pathname + "/historia")
+    }
+
+    const gralhas = () => {
+        router.push(pathname + "/gralhas")
+    }
+
+    const missao = () => {
+        router.push(pathname + "/missao")
+    }
+
+    const atualidade = () => {
+        router.push(pathname + "/atualidade")
+    }
+
+    const contactos = () => {
+        router.push(pathname + "/contactos")
+    }
+
+    const parceiros = () => {
+        router.push(pathname + "/parceiros")
+    }
+
+    const mensagem = () => {
+        router.push(pathname + "/mensagem")
+    }
+
+    const promover = () => {
+        router.push(pathname + "/promover")
+    }
+
+    const equipa = () => {
+        router.push(pathname + "/equipa")
+    }
+
+    const eventos = () => {
+        router.push(pathname + "/eventos")
+    }
+
+    const luta = () => {
+        router.push(pathname + "/luta")
+    }
+
+    const foteca = () => {
+        router.push(pathname + "/foteca")
+    }
+
     return (
         <>
 
@@ -70,6 +118,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={historia}
                                                     >
                                                         A nossa história
                                                     </Button>
@@ -79,6 +128,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={missao}
                                                     >
                                                         A nossa missão
                                                     </Button>
@@ -88,6 +138,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={gralhas}
                                                     >
                                                         Gralhas
                                                     </Button>
@@ -97,6 +148,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={equipa}
                                                     >
                                                         Equipa e Membros
                                                     </Button>
@@ -106,6 +158,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={parceiros}
                                                     >
                                                         Parceiros e Apoio
                                                     </Button>
@@ -136,6 +189,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={luta}
                                                     >
                                                         Luta contra o isolamento
                                                     </Button>
@@ -145,6 +199,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={promover}
                                                     >
                                                         Promover Gralhas
                                                     </Button>
@@ -175,6 +230,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={foteca}
                                                     >
                                                         Foteca
                                                     </Button>
@@ -184,6 +240,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={eventos}
                                                     >
                                                         Próximos Eventos
                                                     </Button>
@@ -197,6 +254,7 @@ const Homepage = () => {
                                     <Button
                                         variant='light'
                                         className='text-sm font-bold text-white'
+                                        onClick={atualidade}
                                     >
                                         Atualidade
                                     </Button>
@@ -222,6 +280,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={mensagem}
                                                     >
                                                         Enviar Mensagem
                                                     </Button>
@@ -231,6 +290,7 @@ const Homepage = () => {
                                                     <Button
                                                         variant="light"
                                                         className="text-sm text-black font-semibold w-full"
+                                                        onClick={contactos}
                                                     >
                                                         Contactos
                                                     </Button>
@@ -276,7 +336,7 @@ const Homepage = () => {
                     </div>
 
                     <div className="mr-4">
-                        <Button className="text-white font-bold py-2 px-4 rounded" color="success">
+                        <Button className="text-white font-bold py-2 px-4 rounded" color="success" onClick={historia}>
                             Descubra a nossa história
                         </Button>
                     </div>
@@ -286,7 +346,7 @@ const Homepage = () => {
 
             {/* Cartao-Imagem /A Nossa Missao*/}
             <div>
-                <div className='flex justify-between items-center  p-32'>
+                <div className='flex justify-between items-center space-x-12  p-32'>
                     <div className='ml-16'>
                         <Image
                             width={500}
@@ -299,9 +359,10 @@ const Homepage = () => {
 
                     <div className='mr-16'>
                         <div className="text-center text-xl">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>Nullam pulvinar risus non risus hendrerit venenatis.</p>
-                            <p>Pellentesque sit amet hendrerit risus, sed porttitor quam.</p>
+                            <p>Gralhas é uma aldeia portuguesa do concelho de Montalegre,  faz parte do Barroso transmontano, </p>
+                            <p>situa-se no sopé da Serra do Larouco, onde nasce o Rio Cávado.</p>
+                            <p>A história da freguesia de Gralhas é milenar!</p>
+                            <p> As principais actividades económicas situam-se nas áreas da agricultura e pecuária.</p>
                         </div>
 
                         <div className="mt-4 items-center flex justify-center">
@@ -309,6 +370,7 @@ const Homepage = () => {
                                 size="lg"
                                 radius='none'
                                 color='success'
+                                onClick={gralhas}
                             >
                                 Saiba Mais
                             </Button>
@@ -323,32 +385,38 @@ const Homepage = () => {
                 <p className="text-5xl -mt-20 text-black font-semibold mb-20">Os nossos Valores</p>
                 <div className=" flex justify-between space-x-8">
                     <div className="">
-                        <h1 className="text-2xl text-center font-bold text-black">Partilha</h1>
+                        <h1 className="text-2xl text-center font-bold text-black">Missão</h1>
 
                         <div className="text-center text-xl mt-4">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>Nullam pulvinar risus non risus hendrerit venenatis.</p>
-                            <p>Pellentesque sit amet hendrerit risus, sed porttitor quam.</p>
+                            <p>Contribuir para o desenvolvimento social local</p>
+                            <p>Promover um ambiente saudável e acolhedor para a prática de atividades recreativas,</p>
+                            <p>desportivas e socioculturais, visando o bem-estar e integração dos associados, bem</p>
+                            <p>como o desenvolvimento pessoal e social da população.</p>
                         </div>
                     </div>
 
                     <div className="">
-                        <h1 className="text-2xl text-center font-bold text-black">Empatia</h1>
+                        <h1 className="text-2xl text-center font-bold text-black">Visão:</h1>
 
                         <div className="text-center text-xl mt-4">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>Nullam pulvinar risus non risus hendrerit venenatis.</p>
-                            <p>Pellentesque sit amet hendrerit risus, sed porttitor quam.</p>
+                            <p>Ser reconhecida como uma referência na promoção do bem-estar e qualidade de vida.</p>
+                            <p>Ser reconhecida como uma referencia na promoção de atividades recreativas,</p>
+                            <p>desportivas e socioculturais, contribuindo para a melhoria da qualidade de vida de seus</p>
+                            <p>associados e da população em geral.</p>
                         </div>
                     </div>
 
                     <div className="">
-                        <h1 className="text-2xl text-center font-bold text-black">Valores</h1>
+                        <h1 className="text-2xl text-center font-bold text-black">Valores:</h1>
 
                         <div className="text-center text-xl mt-4">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>Nullam pulvinar risus non risus hendrerit venenatis.</p>
-                            <p>Pellentesque sit amet hendrerit risus, sed porttitor quam.</p>
+                            <p>Transparência,</p>
+                            <p>ética,</p>
+                            <p>respeito,</p>
+                            <p>solidariedade,</p>
+                            <p>diversidade,</p>
+                            <p>excelência,</p>
+                            <p>compromisso com a comunidade e sustentabilidade.</p>
                         </div>
                     </div>
                 </div>

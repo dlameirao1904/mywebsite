@@ -80,7 +80,7 @@ const Homepage = () => {
 
             {/* Imagem principal */}
             <div className="">
-                <div className="flex min-h-screen w-full justify-center bg-contain bg-center bg-no-repeat md:bg-cover items-center relative overflow-clip sm:overflow-hidden">
+                <div className="flex min-h-screen w-full justify-center bg-center bg-no-repeat  items-center relative">
                     <img
                         src="/images/GralhasLaroucoSol.jpg"
                         alt="Gralhas"
@@ -352,7 +352,7 @@ const Homepage = () => {
                             width={500}
                             height={900}
                             alt="a nossa missão"
-                            src="/images/gralhas_missao.jpg"
+                            src="/images/GralhasLaroucoSol.jpg"
                         />
 
                     </div>

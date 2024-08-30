@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 
 const Construction = () => {
 
@@ -11,10 +12,12 @@ const Construction = () => {
 
             <div className="flex justify-center -mt-16 items-center h-screen">
 
-                <img
+                <Image
                     src="/images/componentes/construction.jpg"
                     alt="Gralhas"
                     className="w-50 h-50"
+                    width={100}
+                    height={100}
                 />
 
             </div>

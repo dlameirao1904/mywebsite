@@ -36,6 +36,7 @@ const Cartao = ({ title, idEvento, data, hora, imagem, descricao }) => {
                                 width={500}
                                 height={900}
                                 src={imagem}
+                                alt="Gralhas"
                             />
                         </div>
                         <div className="items-center">

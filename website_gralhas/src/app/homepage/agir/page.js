@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import {
     Card, CardHeader, CardBody, Button, CardFooter, Checkbox, Image,
@@ -32,14 +32,26 @@ const Agir = () => {
         }
     };
 
+    const [signiture, setSigniture] = useState("");
+
+    const assinaturaDigital = () => {
+        setSigniture("assinaturaDigital");
+    }
+
+    const assinaturaEscrever = () => {
+        setSigniture("assinaturaEscrever");
+    }
+
 
     return (
         <>
             <div className="flex min-h-screen w-full justify-center bg-contain bg-center bg-no-repeat md:bg-cover items-center relative overflow-clip sm:overflow-hidden">
-                <img
+                <Image
                     src="/images/Gralhas.jpg"
                     alt="Gralhas"
                     className="absolute top-0 left-0 h-full w-full object-cover z-0 opacity-70"
+                    width={100}
+                    height={100}
                 />
                 <div className="flex justify-between">
 
@@ -110,7 +122,7 @@ const Agir = () => {
                                                 <Input type="text" label="Data de Nascimento" placeholder="format: dd-MM-yyyy" isRequired />
                                                 <Checkbox defaultSelected>Tomo conhecimento das regras e normas da associação e aceito receber informações e notícias via correio eletrónico.</Checkbox>
                                                 <div>
-                                                    <h2 className="font-bold">Assinatura</h2>
+                                                    <h2 className="font-bold">Assinatura Digital</h2>
                                                     <SignatureCanvas
                                                         ref={sigCanvas}
                                                         canvasProps={{ width: 400, height: 50, style: { border: '2px solid black' } }}

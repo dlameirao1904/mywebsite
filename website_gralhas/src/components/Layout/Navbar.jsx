@@ -43,7 +43,7 @@ export default function Navbar({ toggle, children, breadcrumbs }) {
                 </div>
 
                 <div className='items-center text-sm font-semibold'>
-                    <h1 className=''>Associação ARDSC de Gralhas</h1>
+                    <h1 className=''><a href='/homepage'>Associação ARDSC de Gralhas</a></h1>
                 </div>
 
                 <div className="flex items-center space-x-4">

@@ -1,6 +1,6 @@
 "use client"
 import { Input, Button } from "@nextui-org/react";
-import { Image } from "@nextui-org/react";
+import Image from 'next/image';
 import SlideShow from "@/components/Eventos/SlideShow";
 import React, { useState } from "react"
 import { useRouter, usePathname } from "next/navigation";
@@ -81,15 +81,18 @@ const Homepage = () => {
             {/* Imagem principal */}
             <div className="">
                 <div className="flex min-h-screen w-full justify-center bg-center bg-no-repeat  items-center relative">
-                    <img
+                    <Image
                         src="/images/GralhasLaroucoSol.jpg"
                         alt="Gralhas"
                         className="absolute top-0 left-0 h-full w-full object-cover z-0"
+                        width={1000}
+                        height={1000}
                     />
                     <nav className="w-full bg-transparent absolute top-0 z-10">
                         <div className='flex justify-between'>
                             <div className='ml-2 mt-2 items-center'>
-                                <img
+                                <Image
+                                    alt="Gralhas"
                                     src={"/images/logo-gralhas.png"}
                                     width={150}
                                     height={150}
@@ -352,7 +355,7 @@ const Homepage = () => {
                             width={500}
                             height={900}
                             alt="a nossa missão"
-                            src="/images/GralhasLaroucoSol.jpg"
+                            src="/images/gralhas_foto5.jpg"
                         />
 
                     </div>

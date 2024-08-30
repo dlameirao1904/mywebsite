@@ -1,52 +1,50 @@
-// SlideShow.js
-import React, { useState } from 'react';
-import Cartao from './Cartao';
-import { Button } from '@nextui-org/react';
+"use client"
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 
-const SlideShow = ({ cards }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const Example = () => {
+    const images = [
+        "/images/gralhas_foto1.jpg",
+        "/images/gralhas_foto2.jpg",
+        "/images/gralhas_foto3.jpg",
+        "/images/gralhas_foto4.jpg"
+    ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === cards.length - 1 ? 0 : prevSlide + 1));
-  };
+    const properties = {
+        duration: 3000,
+        prevArrow: (
+            <div className="bg-gray-200 hover:bg-gray-300 rounded-full p-2 cursor-pointer">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </div>
+        ),
+        nextArrow: (
+            <div className="bg-gray-200 hover:bg-gray-300 rounded-full p-2 cursor-pointer">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+        )
+    };
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? cards.length - 1 : prevSlide - 1));
-  };
-
-  return (
-    <div className="slideshow relative">
-      <div className="slides flex">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className={`slide w-full ${index === currentSlide ? 'block' : 'hidden'}`}
-          >
-            <Cartao 
-                title={card.title} 
-                idEvento={card.idEvento} 
-                data={card.data}
-                hora={card.hora}
-                imagem={card.imagem}
-                descricao={card.descricao}
-            />
-          </div>
-        ))}
-      </div>
-      <Button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-blue-500 text-white z-10"
-      >
-        Anterior
-      </Button>
-      <Button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-blue-500 text-white z-10"
-      >
-        Próximo
-      </Button>
-    </div>
-  );
+    return (
+        <Slide {...properties} >
+            <div className="flex items-center justify-center bg-contain bg-center bg-no-repeat h-[300px]" style={{ backgroundImage: `url(${images[0]})` }}>
+                <span className="p-8 text-lg bg-gray-300 text-center"><a href='/homepage/eventos'>Evento 1</a></span>
+            </div>
+            <div className="flex items-center justify-center bg-contain bg-center bg-no-repeat h-[300px]" style={{ backgroundImage: `url(${images[1]})` }}>
+                <span className="p-8 text-lg bg-gray-300 text-center"><a href='/homepage/eventos'>Evento 2</a></span>
+            </div>
+            <div className="flex items-center justify-center bg-contain bg-center bg-no-repeat h-[300px]" style={{ backgroundImage: `url(${images[2]})` }}>
+                <span className="p-8 text-lg bg-gray-300 text-center"><a href='/homepage/eventos'>Evento 3</a></span>
+            </div>
+            <div className="flex items-center justify-center bg-contain bg-center bg-no-repeat h-[300px]" style={{ backgroundImage: `url(${images[3]})` }}>
+                <span className="p-8 text-lg bg-gray-300 text-center"><a href='/homepage/eventos'>Evento 4</a></span>
+            </div>
+        </Slide>
+    );
 };
 
-export default SlideShow;
+export default Example;
